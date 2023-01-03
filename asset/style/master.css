@@ -1,0 +1,391 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style-type: none;
+}
+body{font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;}
+main{
+    overflow: hidden;
+}
+.desktop{
+    width: 100%;
+    height: 92vh;
+    background: url(../img/windows-10-wallpaper.jpg) center center no-repeat;
+}
+.items{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.items>section{
+    width: 15%;
+    height: 92vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-evenly;
+    flex-direction: column;
+    position: relative;
+}
+.items>section:nth-of-type(2){
+    width: 10%;
+}
+.items>section>div{
+    width: 90px;
+    height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+.items>section>div>figure{
+    width: 90px;
+    height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    margin-bottom: 10px;
+    cursor: pointer;
+    z-index: 0;
+}
+.items>section>div>figure>img{
+    width: 50%;
+    height: auto;
+    z-index: 10;
+    position: relative;
+    z-index: 10;
+}
+.items>section>div>figure>figcaption{
+    font-size: 14px;
+    text-transform: capitalize;
+    width: 100%;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    z-index: 10;
+}
+.items>section:nth-of-type(2)>div:nth-last-of-type(1){
+    flex-grow: 10;
+    align-content: flex-end;
+}
+.items>section>div>figure::before{
+    content: '';
+    width: 90px;
+    height: 90px;
+    z-index: 0;
+    background-color: rgba(225, 251, 251, 0.17);
+    border: 1px solid rgba(255, 255, 255, 0.357);
+    position: absolute;
+    top: 0;left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.items>section:nth-of-type(2)>div:nth-last-of-type(1)>figure::before{
+    top: 62%;
+}
+.items>section:nth-of-type(2)>div:nth-last-of-type(1)>figure>figcaption{
+    margin-top: 10px;
+}
+.items>section>div>figure:hover::before{
+    opacity: 1;
+    visibility: visible;
+}
+
+.taskbar{
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(38, 38, 38);
+}
+.icons{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.icons>section:nth-of-type(1){
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.icons>section:nth-of-type(2){
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+.icons>section:nth-of-type(1)>figure{
+    height: 100%;
+    padding: 10px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.icons>section:nth-of-type(1)>figure:hover{
+    background-color: rgba(194, 194, 194, 0.156);
+}
+.icons>section:nth-of-type(1)>figure>img, .icons>section:nth-of-type(1)>div>img{
+    height: 100%;
+}
+.icons>section:nth-of-type(1)>figure:nth-last-of-type(1), .icons>section:nth-of-type(1)>figure:nth-last-of-type(2){
+    width: 170px;
+    height: 100%;
+    background-color:  rgba(63, 81, 84, 0.444);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.icons>section:nth-of-type(1)>figure:nth-last-of-type(2){
+    margin-right: 5px;
+}
+.icons>section:nth-of-type(1)>figure:nth-last-of-type(1):after, .icons>section:nth-of-type(1)>figure:nth-last-of-type(2)::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: rgb(98, 138, 158);
+    position: absolute;
+    bottom: 0;left: 0;
+}
+.icons>section:nth-of-type(1)>figure:nth-last-of-type(1):hover, .icons>section:nth-of-type(1)>figure:nth-last-of-type(2):hover{
+    background-color:  rgba(194, 194, 194, 0.156);
+}
+.icons>section:nth-of-type(1)>figure:nth-last-of-type(1)>figcaption, .icons>section:nth-of-type(1)>figure:nth-last-of-type(2)>figcaption{
+    color: white;
+    font-size: 12px;
+    
+}
+.icons>section:nth-of-type(1)>div{
+    width: 345px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+.icons>section:nth-of-type(1)>div>input{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.icons>section:nth-of-type(1)>div>input::placeholder{
+    font-size: 14px;
+    color: rgb(41, 41, 41);
+    padding-left: 40px;
+}
+.icons>section:nth-of-type(1)>div>img{
+    width: 7%;
+    height: 100%;
+    object-fit: contain;
+    background-color: white;
+    padding-left: 5px;
+}
+.icons>section:nth-of-type(2)>span{
+    color: white;
+    font-size: 12px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    margin: 0 3px;
+    padding: 0 2px;
+}
+.icons>section:nth-of-type(2)>span:nth-of-type(1){
+    width: 80px;
+}
+.icons>section:nth-of-type(2)>img{
+    width: 10%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 3px;
+    padding: 0 2px;
+}
+.icons>section:nth-of-type(2)>span:hover, .icons>section:nth-of-type(2)>img:hover{
+    background-color:  rgba(194, 194, 194, 0.156);
+}
+.focus{
+    z-index: 100;
+    position: absolute;
+    width: 708px;
+    height: 600px;
+    background-color: rgb(69, 68, 68);
+    bottom: 0px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.focus>div:nth-of-type(1){
+    width: 100%;
+    height: 60px;   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(41, 41, 41);
+}    
+.focus>div:nth-of-type(1)>section:nth-of-type(1){
+    flex-grow: 0.5;
+    justify-content: space-evenly;
+    display: flex;
+}
+.focus>div:nth-of-type(1)>section:nth-of-type(1)>span{
+    font-size: 14px;
+    display: flex;
+    width: 50px;
+    height: 60px;
+    justify-content: center;
+    text-transform: capitalize;
+    position: relative;
+    align-items: center;
+    color: rgb(232, 232, 232);
+}
+.focus>div:nth-of-type(1)>section:nth-of-type(1)>span:hover{
+    color: white;
+}
+.focus>div:nth-of-type(1)>section:nth-of-type(1)>span:nth-of-type(1)::after{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color:  rgb(82, 155, 192);
+    position: absolute;
+    bottom: 0;left: 0;
+}
+.focus>div:nth-of-type(1)>section:nth-of-type(2){
+    flex-grow: 0.5;
+    justify-content: flex-end;
+    display: flex;
+    margin-right: 10px;
+}
+.focus>div:nth-of-type(1)>section:nth-of-type(2)>i{
+    font-size: 16px;
+    color: rgb(232, 232, 232);
+}
+.focus>div:nth-of-type(2), .focus>div:nth-of-type(3){
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+}
+.focus>div:nth-of-type(2)>span, .focus>div:nth-of-type(2)>figure>figcaption, .focus>div:nth-of-type(3)>span{
+    color:  rgb(232, 232, 232);
+    font-size: 16px;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    font-weight: 400;
+    align-items: center;
+    justify-content: flex-start;
+    text-transform: capitalize;
+}
+.focus>div:nth-of-type(2)>figure>figcaption{
+    font-size: 14px;
+    margin-left: 20px;
+    z-index: 100;
+}
+.focus>div:nth-of-type(2)>figure{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 10px;
+    align-items: center;
+    border-bottom: 1px solid rgba(240, 248, 255, 0.285);
+    position: relative;
+}
+.focus>div:nth-of-type(2)>figure>img{
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    margin: 10px 0;
+    z-index: 100;
+}
+.focus>div:nth-of-type(2)>figure::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 248, 255, 0.285);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.focus>div:nth-of-type(2)>figure::before{
+    content: 'X';
+    color:  rgb(232, 232, 232);
+    position: absolute;
+    top: 40%;
+    right: 9px;
+    opacity: 0;
+    visibility: hidden;
+}
+.focus>div:nth-of-type(2)>figure:hover::after, .focus>div:nth-of-type(2)>figure:hover::before{
+    opacity: 1;
+    visibility: visible;
+}
+.focus>div:nth-of-type(3){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+.focus>div:nth-of-type(3)>figure{
+    width: 45%;
+    height: 85px;
+    display: flex;
+    border-radius: 10px;
+    background-color: rgba(106, 105, 105, 0.216);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    margin-bottom: 20px;
+}
+.focus>div:nth-of-type(3)>figure:hover{
+    background-color:  rgba(240, 248, 255, 0.216);
+}
+.focus>div:nth-of-type(3)>figure>img{
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    margin: 10px 0;
+    z-index: 100;
+}
+.focus>div:nth-of-type(3)>figure>figcaption{
+    color:  rgb(232, 232, 232);
+    font-size: 14px;
+    display: flex;
+    width: 100%;
+    height: 30px;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+.focus{
+    opacity: 0;
+    visibility: hidden;
+}
+.icons>section:nth-of-type(1)>div>input:focus ~ .focus{
+    opacity: 1;
+    visibility: visible;
+}
+.icons>section:nth-of-type(1)>div>input:focus{
+    outline: none;
+}
